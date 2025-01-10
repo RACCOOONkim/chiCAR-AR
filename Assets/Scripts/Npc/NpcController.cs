@@ -37,4 +37,5 @@ public class NpcController : MonoBehaviour
             //transform.DORotateQuaternion(targetRotation, delay).SetEase(Ease.Linear);
         }
     }
+
 }
