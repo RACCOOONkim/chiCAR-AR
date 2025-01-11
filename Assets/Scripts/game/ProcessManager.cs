@@ -6,9 +6,10 @@ public class ProcessManager : MonoBehaviour
 {
     private enum ProcessStage { Stage1, Stage2, Stage3 }
     private ProcessStage currentStage = ProcessStage.Stage1;
-
+    public MovingMap movingMap;
     public GameObject daejeonStart;
     public GameObject busanStart;
+    public GameObject canvas2;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,9 @@ public class ProcessManager : MonoBehaviour
     private void StartStage2()
     {
         currentStage = ProcessStage.Stage2;
-        Debug.Log("Stage 2 started.");
+        Debug.Log("Daejoen.");
+        movingMap.MovingPause();
+        canvas2.SetActive(true);
         // Stage 2 시작 로직 추가
     }
 

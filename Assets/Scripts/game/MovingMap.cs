@@ -11,13 +11,9 @@ public class MovingMap : MonoBehaviour
     public float moveSpeed = 60f;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        StartMoving();
-    }
 
     // 오브젝트 이동 시작
-    void StartMoving()
+    public void StartMoving()
     {
         moveTween = transform.DOMoveZ(-560, moveSpeed).SetEase(Ease.Linear).SetAutoKill(false);
     }
