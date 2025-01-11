@@ -9,13 +9,28 @@ public class MovingMap : MonoBehaviour
 {
     private Tween moveTween;
     public float moveSpeed = 60f;
+    public GameObject final;
+    public AudioSource bgmsource;
 
     // Start is called before the first frame update
+    void Start()
+    {
+    }
 
     // 오브젝트 이동 시작
     public void StartMoving()
     {
-        moveTween = transform.DOMoveZ(-560, moveSpeed).SetEase(Ease.Linear).SetAutoKill(false);
+        moveTween = transform.DOMoveZ(-370, moveSpeed).SetEase(Ease.Linear).SetAutoKill(false).OnComplete(OnMoveComplete);
+    }
+
+    // 이동 완료 시 호출되는 메서드
+    private void OnMoveComplete()
+    {
+        if (final != null)
+        {
+            final.SetActive(true); // final 오브젝트 활성화
+            bgmsource.Pause();
+        }
     }
 
     // 이동 일시정지

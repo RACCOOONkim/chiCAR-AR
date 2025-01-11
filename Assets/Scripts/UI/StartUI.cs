@@ -13,6 +13,7 @@ public class StartUI : MonoBehaviour
     public NpcController npcController; // NpcController 컴포넌트
     public GameObject pivot1;
     public GameObject npcCharacter;
+    public MovingMap map; // Map
 
     // Start is called before the first frame update
     void Start()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetBread : MonoBehaviour
 {
     public GameObject otherObject; // 활성화할 다른 오브젝트
-    public GameObject deactivateObject; // 활성화할 다른 오브젝트
+    // public GameObject deactivateObject; // 활성화할 다른 오브젝트
     public MovingMap movingMap;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class GetBread : MonoBehaviour
         if (otherObject != null)
         {
             otherObject.SetActive(true); // 다른 오브젝트 활성화
-            deactivateObject.SetActive(false);
+            // deactivateObject.SetActive(false);
         }
         gameObject.SetActive(false); // 본 오브젝트 비활성화
     }
