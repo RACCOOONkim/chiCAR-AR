@@ -54,4 +54,15 @@ public class StartUI : MonoBehaviour
             npcCharacter.transform.DOScale(pivot1.transform.localScale, movingTime).SetEase(Ease.Linear);
         }
     }
+
+    public void MoveBackFromPivot1WithScale()
+    {
+        npcController.enabled = false;
+        if (pivot1 != null)
+        {
+            npcCharacter.transform.DOMove(new Vector3(-0.354f, 1.039f, 0.475f), movingTime).SetEase(Ease.Linear);
+            npcCharacter.transform.DORotate(new Vector3(npcCharacter.transform.rotation.eulerAngles.x, npcCharacter.transform.rotation.eulerAngles.y + 180, npcCharacter.transform.rotation.eulerAngles.z), movingTime).SetEase(Ease.Linear);
+            npcCharacter.transform.DOScale(0.1f, movingTime).SetEase(Ease.Linear);
+        }
+    }
 }

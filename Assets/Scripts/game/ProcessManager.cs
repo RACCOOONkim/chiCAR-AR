@@ -10,6 +10,7 @@ public class ProcessManager : MonoBehaviour
     public GameObject daejeonStart;
     public GameObject busanStart;
     public GameObject canvas2;
+    public GameObject canvas6;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,8 @@ public class ProcessManager : MonoBehaviour
     {
         currentStage = ProcessStage.Stage3;
         Debug.Log("Stage 3 started.");
+        canvas6.SetActive(true);
+        movingMap.MovingPause();
         // Stage 3 시작 로직 추가
     }
 
