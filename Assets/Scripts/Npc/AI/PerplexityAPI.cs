@@ -8,7 +8,7 @@ using System.Collections;
 public class PerplexityAPI : MonoBehaviour
 {
     [SerializeField] private TTSManager ttsManager;
-    private string apiKey = "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";
+    private string apiKey = "-";
     private string url = "https://api.perplexity.ai/chat/completions";
 
     public static string responseText;
